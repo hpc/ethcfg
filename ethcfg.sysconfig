@@ -1,0 +1,11 @@
+#NODE		Hostname		DEV[=if[,if]]	IP/Prefix	MTU	Route[,Route]	NW/Prefix[,NW/Prefix]
+#
+#
+#c0-0c0s0n0	host0.localdomain	eth0		1.2.3.4/24	*	1.2.3.254	default
+#c0-0c0s0n0	*			eth0:0		11.22.33.44/24	*	11.22.33.254	11.22.0.0/16,11.23.0.0/16
+#
+#node1		node1.localdomain	bond0=eth0,eth1	5.6.7.8/24	9000	5.6.7.254
+#
+#IntraNet= '128.165.0.0/16,141.111.0.0/16'
+#ECMP_gw = "10.128.0.252,10.128.0.253,10.128.0.254"
+#node2		node2.lanl.gov		ib0		9.10.11.12/24	9000	$ECMP_gw	$IntraNet
